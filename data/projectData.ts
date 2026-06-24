@@ -1,6 +1,6 @@
 export type Project = {
   id: number;
-  order: number;
+  order: number  ;
   display: boolean;
   slug: string;
   title: string;
@@ -32,9 +32,10 @@ export type Project = {
   features: string[];
 };
 export const majorProjects: Project[] = [
+  //flashcard - 6
   {
     id: 1,
-    order: 5,
+    order: 6,
     display: true,
     slug: "flashcard-generator",
     title: "Flashcard Generator",
@@ -116,10 +117,11 @@ export const majorProjects: Project[] = [
     ],
   },
 
+  //red-bus - 5
   {
     id: 2,
-    order: 3,
-     display: true,
+    order: 5,
+    display: true,
     slug: "red-bus",
     title: "Red Bus",
     tagline: "Bus ticket booking web application",
@@ -214,10 +216,11 @@ export const majorProjects: Project[] = [
         </ul>
       `,
   },
+  //e-com - 4
   {
     id: 3,
-    order: 2,
-     display: true,
+    order: 4,
+    display: true,
     slug: "e-com-app",
     title: "E-Commerce App",
     tagline: "Full-stack e-commerce platform with admin dashboard",
@@ -376,10 +379,11 @@ export const majorProjects: Project[] = [
       "Password reset functionality",
     ],
   },
+  //Tripzy Ai -2 
   {
     id: 4,
-    order: 1,
-     display: true,
+    order: 2,
+    display: true,
     slug: "tripzy-ai",
     title: "Tripzy-AI",
     tagline: "AI-Powered Trip Planner with 3D Globe & Chatbot",
@@ -484,10 +488,11 @@ export const majorProjects: Project[] = [
       "Dark mode & fully responsive design",
     ],
   },
+  // ReaalTime-ChatBot -3
   {
     id: 5,
-    order: 4,
-     display: false,
+    order: 3,
+    display: true,
     slug: "real-time-chatbot-support-system",
     title: "Real-Time Chatbot & Support System",
     tagline: "Scalable real-time chat system with live support & admin control",
@@ -503,8 +508,8 @@ It supports dynamic room creation, real-time messaging, and secure one-on-one in
 Advanced features like auto-closing inactive sessions, admin notifications, and persistent chat state enhance the overall user and support experience.`,
 
     duration: {
-      startDate: "05 May 2025", 
-      endDate: "10 June 2025", 
+      startDate: "05 May 2025",
+      endDate: "10 June 2025",
     },
 
     status: "archived",
@@ -532,6 +537,101 @@ Advanced features like auto-closing inactive sessions, admin notifications, and 
       "Manual control to open/close chat sessions",
       "Persistent chat sessions after refresh",
       "Support dashboard to manage active chats",
+    ],
+  },
+  // Docmind -1
+  {
+    id: 6,
+    order: 1,
+    display: true,
+    slug: "docmind",
+    title: "DocMind-AI",
+    tagline:
+      "AI-powered document Q&A with RAG, chat history, and secure source-grounded answers.",
+    description:
+      "DocMind is a Next.js application that lets users upload documents, extract text from PDFs, DOCX, or TXT files, and chat with an AI assistant that answers only from the uploaded content using Retrieval-Augmented Generation.",
+    content: `<p>
+  <strong>DocMind</strong> is built to make document exploration faster and more reliable. Users can upload files, automatically extract and chunk text, store embeddings in <span><strong>Qdrant</strong></span>, and ask questions through a chat interface backed by <em>Google Gemini</em>. The app keeps conversation history in <strong>MongoDB</strong>, supports document management, and rate-limits chat requests for a smoother and safer experience. The system is designed so answers stay grounded in the uploaded source material, reducing hallucinations and improving trust in the responses.
+</p>
+<br/>
+<p>
+  The project was created to solve a common problem: <em>finding accurate answers inside long documents without wasting time searching manually</em>. Instead of scrolling through pages of text, users can simply upload a document and interact with it conversationally. The app processes <strong>PDF</strong>, <strong>DOCX</strong>, and <strong>TXT</strong> files by extracting their text, splitting the content into meaningful chunks, and generating embeddings that are stored for fast retrieval. This creates a more intelligent workflow where the assistant can surface only the most relevant parts of the document when a question is asked.
+</p>
+<br/>
+<p>
+  On the <strong>frontend experience</strong> side, DocMind focuses on clarity, simplicity, and ease of use. The interface is structured so users can move naturally from <span><strong>uploading a file</strong></span> to <span><strong>chatting with the document</strong></span> without confusion. Document management actions such as <em>listing, renaming, and deleting</em> are kept accessible and straightforward, helping users stay organized as they work with multiple files. The chat view is designed to feel conversational and responsive, allowing users to review answers comfortably while maintaining context from earlier messages.
+</p>
+<br/>
+<p>
+  Under the hood, DocMind uses a <strong>Retrieval-Augmented Generation</strong> workflow to make the responses more dependable. When a user asks a question, the system retrieves the most relevant chunks from Qdrant, combines them with recent conversation history from MongoDB, and sends that context to <em>Google Gemini</em> to generate the final answer. This design helps keep replies <strong>accurate, document-specific, and context-aware</strong>. If the answer is not present in the uploaded material, the model is guided to avoid making unsupported claims, which improves trust and reduces incorrect responses.
+</p>
+<br/>
+<p>
+  The overall result is a <strong>modern AI-powered document assistant</strong> that feels polished, practical, and efficient. With a clean workflow, thoughtful state management, and a strong focus on user experience, DocMind transforms documents from static files into interactive knowledge sources. It is especially useful for <em>students, researchers, professionals, and anyone who needs to extract information quickly from large documents</em>.
+</p>`,
+    duration: {
+      startDate: "10 May 2026",
+      endDate: "24 July 2026",
+    },
+    status: "completed",
+    category: "fullstack",
+    thumbnail: "/project-images/docmind-ai/home.png",
+    images: [
+      {
+        title: "DocMind Home",
+        src: "/project-images/docmind-ai/home.png",
+        alt: "Landing Page",
+      },
+      {
+        title: "Dashboard",
+        src: "/project-images/docmind-ai/dashboard.png",
+        alt: "DocMind dashboard showing uploaded documents and project overview",
+      },
+
+      {
+        title: "Chat-UI",
+        src: "/project-images/docmind-ai/chat.png",
+        alt: "DocMind chat interface for asking questions about an uploaded document",
+      },
+      {
+        title: "Upload",
+        src: "/project-images/docmind-ai/upload.png",
+        alt: "DocMind document upload screen with processing status",
+      },
+      {
+        title: "Rename Modal",
+        src: "/project-images/docmind-ai/rename.png",
+        alt: "Rename Modal for existing document",
+      },
+    ],
+    links: {
+      live: "https://doc-mind-alpha.vercel.app",
+      github: "https://github.com/Ashvary11/DocMind.git",
+    },
+    techStack: [
+      "next-js",
+      "typescript",
+      "tailwind",
+      "shadcn",
+      "langchain",
+      "gemini",
+      "qdrant",
+      "mongodb",
+      "mongoose",
+      "pdf-parse",
+      "mammoth",
+      "react-markdown",
+      "rate-limiter-flexible",
+    ],
+    features: [
+      "Upload PDF, DOCX, and TXT documents",
+      "Automatic text extraction and chunking",
+      "Vector storage and retrieval with Qdrant",
+      "AI chat grounded only in uploaded content",
+      "Conversation history stored in MongoDB",
+      "Document management with rename and delete",
+      "Rate-limited chat requests per user",
+      "Structured AI responses with source-aware answers",
     ],
   },
 ];
@@ -576,7 +676,7 @@ const archievedProjects: Project[] = [
   {
     id: 5,
     order: 9,
-     display: false,
+    display: false,
     slug: "book-my-show",
     title: "BookMyShow",
     tagline: "Movie ticket booking application",

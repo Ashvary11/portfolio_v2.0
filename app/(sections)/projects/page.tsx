@@ -18,6 +18,10 @@ import {
   FaDatabase,
   FaCloud,
   FaBootstrap,
+  FaFilePdf,
+  FaFileWord,
+  FaMarkdown,
+  FaShieldAlt,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -49,7 +53,7 @@ import {
 // import restApiIcon from "@/data/thumbnail/restApi.png";
 import Image from "next/image";
 import { ImagesBadge } from "@/components/ui/images-badge";
-import { GiOlive } from "react-icons/gi";
+
 import Link from "next/link";
 import { DiMongodb } from "react-icons/di";
 import { FaVideo } from "react-icons/fa6";
@@ -90,7 +94,7 @@ const techIcons: Record<string, any> = {
   shadcn: <SiShadcnui className="text-white" />,
   mongoose: <SiMongoose className="text-red-500" />,
   clerk: <SiClerk className="text-indigo-400" />,
-  langchain: <SiLangchain className="text-green-400" />,
+  langchain: <SiLangchain className="text-purple-400" />,
   gemini: <SiGoogle className="text-blue-400" />,
   "three-js": <SiThreedotjs className="text-white" />,
   arcjet: <SiArc className="text-purple-400" />,
@@ -100,6 +104,11 @@ const techIcons: Record<string, any> = {
   socketio: <SiSocketdotio className="text-orange-400" />,
   nodejs: <SiNodedotjs className="text-green-400" />,
   mongodb: <SiMongodb className="text-green-400" />,
+  qdrant: <FaDatabase className="text-red-500" />,
+  "pdf-parse": <FaFilePdf className="text-red-500" />,
+  mammoth: <FaFileWord className="text-gray-500" />,
+  "react-markdown": <FaMarkdown className="text-sky-400" />,
+  "rate-limiter-flexible": <FaShieldAlt className="text-orange-400" />,
 };
 
 const Projects = () => {
