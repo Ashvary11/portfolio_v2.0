@@ -571,7 +571,7 @@ Advanced features like auto-closing inactive sessions, admin notifications, and 
 </p>`,
     duration: {
       startDate: "10 May 2026",
-      endDate: "24 July 2026",
+      endDate: "29 June 2026",
     },
     status: "completed",
     category: "fullstack",
